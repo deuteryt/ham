@@ -20,5 +20,37 @@ html {
 /* Nav Styling */
 
 .logo {
-    width: 65em;
+    width: 6.5em;
+}
+
+nav {
+    background-color: rgb(242, 236, 236);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 8vh;
+    padding: 2em;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    width: 55%;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    position: relative;
+    padding: 0.2em;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
 }

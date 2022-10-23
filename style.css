@@ -45,6 +45,7 @@ a {
     font-weight: bold;
     position: relative;
     padding: 0.2em;
+    color: --blue;
 }
 
 a::after {
@@ -52,5 +53,39 @@ a::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    
+    width: 10%;
+    background-color: var(--blue);
+    height: .15em;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Burger styling*/
+
+.burger {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.line {
+    width: 3em;
+    height: .3em;
+    background: var(--blue);
+    margin: .7em;
+    border-radius: 20%;
+    transition: .3s ease-in-out;
+}
+
+@media only screen and (max-width: 1000px) {
+    .burger {
+        display: block;
+        transition: .3s ease-in-out;
+    }
 }

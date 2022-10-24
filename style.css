@@ -30,6 +30,7 @@ nav {
     align-items: center;
     height: 8vh;
     padding: 2em;
+    position: relative;
 }
 
 ul {
@@ -87,5 +88,44 @@ a:hover::after {
     .burger {
         display: block;
         transition: .3s ease-in-out;
+    }
+
+    .burger.active .line:first-child {
+        transform: translate(-300px);
+    }
+
+    .burger.active .line:nth-child(2) {
+        transform: translate(-405deg) translateY(8px);
+    }
+
+    .burger.active .line:nth-child(3) {
+        transform: translate(-320deg) translateY(-10px);
+    }
+
+    ul {
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        background: var(--blue);
+        height: 92vh;
+        flex-direction: column;
+        text-align: center;
+        transform: translate(100%);
+    }
+
+    ul.active {
+        transform: translate(0%);
+    }
+
+    a {
+        color: whitesmoke;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    ul {
+        width: 100%;
     }
 }
